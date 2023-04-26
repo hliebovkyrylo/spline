@@ -1,0 +1,16 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 101px 0;
+    opacity: .4;
+}
+
+span {
+    color: #fff;
+}
+
+a {
+    margin-right: 5px;
+}
