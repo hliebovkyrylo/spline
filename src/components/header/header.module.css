@@ -110,6 +110,7 @@
 }
 
 .toggleItems {
+    display: none;
     position: absolute;
     right: 0;
     top: 60px;
@@ -137,6 +138,10 @@
     .headercontainer {
         display: flex;
         justify-content: center;
+    }
+
+    .toggleItems {
+        display: block;
     }
 
     .header{

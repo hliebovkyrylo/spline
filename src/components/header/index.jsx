@@ -5,7 +5,7 @@ import styles from "./header.module.css";
 import logo from "../../assets/img/logo.png";
 
 export const Header = () => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const handleOpen = () => {
         setOpen(!open);
