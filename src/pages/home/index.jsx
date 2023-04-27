@@ -122,7 +122,7 @@ export const Home = () => {
                     <h2 className={styles.headline}>Designing in 3D has never been easier</h2>
                     <h3 className={styles.subtitle}>Create 3D scenes, edit materials, and model 3D objects. Control the outcome of your design work.</h3>
                     <div className={styles.videoInner}>
-                        <video autoPlay playsInline muted loop src={Video} width="1000" height="634"></video>
+                        <video className={styles.videoItem} autoPlay playsInline muted loop src={Video}></video>
                     </div>
                 </div>
             </section>

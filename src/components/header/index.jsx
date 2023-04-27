@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./header.module.css";
 
 import logo from "../../assets/img/logo.png";
 
 export const Header = () => {
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(!open);
+    };
+
     return (
         <div className={styles.headercontainer}>
             <header className={styles.header}>
@@ -39,6 +45,47 @@ export const Header = () => {
                         <span className={styles.button__link} href="#">Get Started</span>
                     </a>
                 </div>
+                {open ? (
+                    <button className={styles.menu} onClick={handleOpen}>
+                        <span className={styles.line}></span>
+                        <span className={styles.line}></span>
+                        <span className={styles.line}></span>
+                    </button>
+                ) : (
+                    <>
+                        <button className={styles.menu} onClick={handleOpen}>
+                            <span className={[styles.line, styles.active].join(' ')}></span>
+                            <span className={[styles.line, styles.active].join(' ')}></span>
+                            <span className={[styles.line, styles.active].join(' ')}></span>
+                        </button>
+                        <div className={styles.toggleItems}>
+                            <div className={styles.itemToggle}>
+                                <a href="#">Features</a>
+                            </div>
+                            <div className={styles.itemToggle}>
+                                <a href="#">Examples</a>
+                            </div>
+                            <div className={styles.itemToggle}>
+                                <a href="#">Pricing</a>
+                            </div>
+                            <div className={styles.itemToggle}>
+                                <a href="#">Community</a>
+                            </div>
+                            <div className={styles.itemToggle}>
+                                <a href="#">Twitter</a>
+                            </div>
+                            <div className={styles.itemToggle}>
+                                <a href="#">Docs</a>
+                            </div>
+                            <div className={styles.itemToggle}>
+                                <a href="#">Log in</a>
+                            </div>
+                            <div className={styles.itemToggle}>
+                                <a href="#">Get Started</a>
+                            </div>
+                        </div>
+                    </>
+                )}
             </header>
         </div>
     )
